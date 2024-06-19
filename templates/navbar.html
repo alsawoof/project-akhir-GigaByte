@@ -1,0 +1,28 @@
+<nav class="navbar is-fixed-top">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{ url_for('home') }}">
+                <strong>NYEBLAKBUNSS</strong>
+            </a>
+        </div>
+        <div id="navMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="{{ url_for('home') }}">Home</a>
+                <a class="navbar-item" href="{{ url_for('aboutus') }}">About Us</a>
+                <a class="navbar-item" href="{{ url_for('products') }}">Products</a>
+                <a class="navbar-item" href="{{ url_for('faq') }}">FAQ</a>
+                <a class="navbar-item" href="{{ url_for('contact') }}">Contact</a>
+                {% if 'username' in session and request.path == url_for('ulas') %}
+                    <a class="navbar-item" href="{{ url_for('logout') }}">Logout</a>
+                {% elif request.path != url_for('ulas') %}
+                    <a class="navbar-item" href="{{ url_for('ulas') }}">Rate</a>
+                {% endif %}
+                <span class="navbar-item">
+                    <a class="button is-link" href="http://nyeblakbundss.rf.gd/?i=1" target="_blank">
+                        <span>Order</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</nav>

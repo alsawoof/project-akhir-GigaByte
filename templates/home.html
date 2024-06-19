@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NYEBLAKBUNSS | Authentic Seblak</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
+
+    <!-- Bulma CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css'/>
+    <!-- Font Awesome CSS -->
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+
+    <meta property="og:title" content="NYEBLAKBUNSS" />
+    <meta property="og:description" content="Discover the Authentic Taste of Seblak" />
+    <meta property="og:image"
+        content="{{ url_for('static', filename='og-icon.png') }}" />
+
+    <link
+        rel="icon"
+        href="{{ url_for('static', filename='icon.png') }}"
+        type="image/x-icon"
+    />
+    <style>
+        /* Efek hover pada gambar */
+        .card:hover .card-image img {
+            transform: scale(1.1); /* Contoh: gambar diperbesar 10% */
+            transition: transform 0.3s ease; /* Efek transisi untuk perubahan */
+        }
+    </style>
+
+
+</head>
+<body class="has-navbar-fixed-top">
+    {% include 'navbar.html' %}
+    
+    <section class="hero is-fullheight-with-navbar" style="background-image: url('{{ url_for('static', filename='a.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title has-text-white">Welcome to NYEBLAKBUNSS!</h1>
+                <h2 class="subtitle has-text-white">Discover the Authentic Taste of Seblak</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">What is Seblak?</h3>
+                        <p>Seblak is a traditional Indonesian dish made from chewy rice cakes, savory broth, and a mix of fresh vegetables, proteins, and an array of spices. It’s known for its distinctive spicy and savory flavor, making it a favorite among spice lovers.</p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename='seb.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">Why Choose NYEBLAKBUNSS?</h3>
+                        <ul>
+                            <li><strong>Authentic Recipes:</strong> We use traditional recipes passed down through generations to ensure that every bite of our seblak brings you the true taste of Indonesia.</li>
+                            <li><strong>Quality Ingredients:</strong> We source the freshest ingredients to prepare our dishes, ensuring the highest quality and best flavor.</li>
+                            <li><strong>Customization:</strong> Choose your level of spiciness and add your favorite toppings to create your perfect bowl of seblak.</li>
+                            <li><strong>Fast and Friendly Service:</strong> Enjoy quick service and a warm, welcoming atmosphere every time you visit.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename='seb2.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">Our Menu</h3>
+                        <p>Explore our diverse menu that caters to all taste preferences:</p>
+                        <ul>
+                            <li><strong>Classic Seblak:</strong> Traditional seblak with chewy rice cakes, eggs, and a rich, spicy broth.</li>
+                            <li><strong>Special Seblak:</strong> Enhanced with a variety of proteins like chicken, shrimp, and beef.</li>
+                            <li><strong>Vegetarian Seblak:</strong> Loaded with fresh vegetables and tofu for a wholesome meal.</li>
+                            <li><strong>Extra Spicy Seblak:</strong> For those who love an extra kick of heat, this is the ultimate spicy experience.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename='seb3.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+</body>
+</html>
+

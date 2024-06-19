@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact - NYEBLAKBUNSS</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
+
+    <!-- Bulma CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css'/>
+    <!-- Font Awesome CSS -->
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <meta property="og:title" content="NYEBLAKBUNSS" />
+    <meta property="og:description" content="You can contact us through here" />
+    <meta property="og:image"
+        content="{{ url_for('static', filename='og-icon.png') }}" />
+
+    <link
+        rel="icon"
+        href="{{ url_for('static', filename='icon.png') }}"
+        type="image/x-icon"
+    />
+</head>
+<body class="has-navbar-fixed-top">
+    {% include 'navbar.html' %}
+    
+    <section class="hero is-fullheight-with-navbar" style="background-image: url('{{ url_for('static', filename='a.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title has-text-white">Welcome to NYEBLAKBUNSS!</h1>
+                <h2 class="subtitle has-text-white">Discover the Authentic Taste of Seblak</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <section class="section">
+                <div class="container">
+                    <h3 class="title is-3 has-text-dark has-text-centered">Contact Us</h3>
+                    
+                    <div class="columns is-centered">
+                        <div class="column is-half">
+                            <form>
+                                <div class="field">
+                                    <label class="label">Name</label>
+                                    <div class="control">
+                                        <input class="input" type="text" placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Email</label>
+                                    <div class="control">
+                                        <input class="input" type="email" placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Message</label>
+                                    <div class="control">
+                                        <textarea class="textarea" placeholder="Your Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-link" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+</body>
+</html>

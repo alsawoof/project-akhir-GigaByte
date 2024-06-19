@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us - NYEBLAKBUNSS</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
+
+    <!-- Bulma CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css'/>
+    <!-- Font Awesome CSS -->
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+
+    <meta property="og:title" content="NYEBLAKBUNSS" />
+    <meta property="og:description" content="Discover more about NYEBLAKBUNSS" />
+    <meta property="og:image"
+        content="{{ url_for('static', filename='og-icon.png') }}" />
+
+    <link
+        rel="icon"
+        href="{{ url_for('static', filename='icon.png') }}"
+        type="image/x-icon"
+    />
+
+    <style>
+        /* Efek hover pada gambar */
+        .card:hover .card-image img {
+            transform: scale(1.1); /* Contoh: gambar diperbesar 10% */
+            transition: transform 0.3s ease; /* Efek transisi untuk perubahan */
+        }
+    </style>
+    
+</head>
+<body class="has-navbar-fixed-top">
+    {% include 'navbar.html' %}
+    
+    <section class="hero is-fullheight-with-navbar" style="background-image: url('{{ url_for('static', filename='a.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title has-text-white">Welcome to NYEBLAKBUNSS!</h1>
+                <h2 class="subtitle has-text-white">Discover the Authentic Taste of Seblak</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">About Us</h3>
+                        <p>NYEBLAKBUNSS is your destination for authentic Seblak dishes. We are passionate about bringing the true taste of Indonesia to our customers, using traditional recipes passed down through generations.</p>
+                        <p>Our commitment to quality is evident in every dish we serve. We carefully select the freshest ingredients to ensure that each bite is bursting with flavor. Whether you're a spice lover or prefer a milder taste, we offer options to suit every palate.</p>
+                        <p>At NYEBLAKBUNSS, we believe in providing fast and friendly service in a welcoming atmosphere. Whether you're dining in or ordering for takeaway, we strive to make every experience enjoyable.</p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename='seb.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">Our Mission</h3>
+                        <p>At NYEBLAKBUNSS, our mission is simple: to serve delicious, authentic Seblak dishes that delight our customers. We aim to create memorable dining experiences by combining traditional flavors with exceptional service.</p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename='seb2.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">Our Vision</h3>
+                        <p>Our vision at NYEBLAKBUNSS is to become the go-to destination for Seblak enthusiasts everywhere. We strive to continuously innovate and expand our menu while staying true to our roots, ensuring that every visit to NYEBLAKBUNSS is a culinary adventure.</p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename='seb3.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+</body>
+</html>

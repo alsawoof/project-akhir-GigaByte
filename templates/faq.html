@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAQ - NYEBLAKBUNSS</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
+
+    <!-- Bulma CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css'/>
+    <!-- Font Awesome CSS -->
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <meta property="og:title" content="NYEBLAKBUNSS" />
+    <meta property="og:description" content="Frequently Asked Questions about us" />
+    <meta property="og:image"
+        content="{{ url_for('static', filename='og-icon.png') }}" />
+
+    <link
+        rel="icon"
+        href="{{ url_for('static', filename='icon.png') }}"
+        type="image/x-icon"
+    />
+    <style>
+        /* Efek hover pada gambar */
+        .card:hover .card-image img {
+            transform: scale(1.1); /* Contoh: gambar diperbesar 10% */
+            transition: transform 0.3s ease; /* Efek transisi untuk perubahan */
+        }
+    </style>
+</head>
+<body class="has-navbar-fixed-top">
+    {% include 'navbar.html' %}
+    
+    <section class="hero is-fullheight-with-navbar" style="background-image: url('{{ url_for('static', filename='a.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title has-text-white">Welcome to NYEBLAKBUNSS!</h1>
+                <h2 class="subtitle has-text-white">Discover the Authentic Taste of Seblak</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <section class="section">
+                <div class="container">
+                    <h3 class="title is-3 has-text-dark">Frequently Asked Questions (FAQ)</h3>
+                    
+                    <div class="faq">
+                        <div class="faq-item">
+                            <h4 class="subtitle is-4">What is Seblak?</h4>
+                            <p>Seblak is a traditional Indonesian dish made from chewy rice cakes, savory broth, and a mix of fresh vegetables, proteins, and an array of spices. It’s known for its distinctive spicy and savory flavor, making it a favorite among spice lovers.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4 class="subtitle is-4">What are the different types of Seblak offered?</h4>
+                            <p>At NYEBLAKBUNSS, we offer a variety of Seblak options to cater to different preferences. Our menu includes Classic Seblak, Special Seblak with additional proteins, Vegetarian Seblak, and Extra Spicy Seblak.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4 class="subtitle is-4">How spicy is the Extra Spicy Seblak?</h4>
+                            <p>Our Extra Spicy Seblak is designed for those who enjoy a fiery kick with every bite. It's made with our special blend of spices that will satisfy even the most adventurous spice enthusiasts.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4 class="subtitle is-4">Can I customize my order?</h4>
+                            <p>Absolutely! We offer customization options for our Seblak dishes. You can choose your preferred spice level, add extra toppings, and select your portion size to tailor your order to your liking.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4 class="subtitle is-4">Is NYEBLAKBUNSS available for catering?</h4>
+                            <p>Yes, we offer catering services for events of all sizes. Whether you're planning a small gathering or a large corporate event, our team will work with you to create a memorable dining experience for your guests.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+</body>
+</html>
+

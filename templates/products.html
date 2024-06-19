@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Products - NYEBLAKBUNSS</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
+
+    <!-- Bulma CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css'/>
+    <!-- Font Awesome CSS -->
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <meta property="og:title" content="NYEBLAKBUNSS" />
+    <meta property="og:description" content="List of Product on NYEBLAKBUNSS site" />
+    <meta property="og:image"
+        content="{{ url_for('static', filename='og-icon.png') }}" />
+
+    <link
+        rel="icon"
+        href="{{ url_for('static', filename='icon.png') }}"
+        type="image/x-icon"
+    />
+    <style>
+        /* Efek hover pada gambar */
+        .card:hover .card-image img {
+            transform: scale(1.1); /* Contoh: gambar diperbesar 10% */
+            transition: transform 0.3s ease; /* Efek transisi untuk perubahan */
+        }
+    </style>
+</head>
+<body class="has-navbar-fixed-top">
+    {% include 'navbar.html' %}
+    
+    <section class="hero is-fullheight-with-navbar" style="background-image: url('{{ url_for('static', filename='a.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title has-text-white">Welcome to NYEBLAKBUNSS!</h1>
+                <h2 class="subtitle has-text-white">Discover the Authentic Taste of Seblak</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">Our Products</h3>
+                        <p>Explore our diverse range of Seblak dishes, each crafted with care to bring you the authentic flavors of Indonesia:</p>
+                        <ul>
+                            <li><strong>Classic Seblak:</strong> Traditional seblak with chewy rice cakes, eggs, and a rich, spicy broth.</li>
+                            <li><strong>Special Seblak:</strong> Enhanced with a variety of proteins like chicken, shrimp, and beef.</li>
+                            <li><strong>Vegetarian Seblak:</strong> Loaded with fresh vegetables and tofu for a wholesome meal.</li>
+                            <li><strong>Extra Spicy Seblak:</strong> For those who love an extra kick of heat, this is the ultimate spicy experience.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename='seb.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">Customization Options</h3>
+                        <p>At NYEBLAKBUNSS, we understand that everyone has their own preferences. That's why we offer a range of customization options:</p>
+                        <ul>
+                            <li><strong>Spice Level:</strong> Choose your preferred level of spiciness for a personalized experience.</li>
+                            <li><strong>Toppings:</strong> Add your favorite toppings, from extra eggs to additional proteins.</li>
+                            <li><strong>Portion Size:</strong> Select the portion size that suits your appetite, from small to extra large.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename='seb2.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+</body>
+</html>
+
